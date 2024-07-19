@@ -7,6 +7,7 @@ import Providers from "./providers";
 export const metadata: Metadata = {
   title: "Agira",
   description: "Cultivator of Tomorrow's Harvest",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({
