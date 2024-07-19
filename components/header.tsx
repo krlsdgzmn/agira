@@ -19,11 +19,9 @@ export default function Header() {
         </div>
 
         {/* add nav here */}
-        <div className="flex gap-2">
-          <Button variant="outline" size="sm">
-            Login
-          </Button>
-          <Button className="bg-farm text-white hover:bg-farm/90" size="sm">
+        <div className="flex items-center gap-2">
+          <Button variant="outline">Login</Button>
+          <Button className="bg-farm text-white hover:bg-farm/90">
             Get Started
           </Button>
         </div>
