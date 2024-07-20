@@ -2,6 +2,7 @@ import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import FeatureCard from "./_components/feature-card";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -28,9 +29,11 @@ export default function HomePage() {
           </p>
 
           <div className="flex justify-center gap-2 md:justify-start">
-            <Button className="animate-buttonheartbeat bg-farm text-lg text-white hover:bg-farm/80 xl:px-8 xl:py-6 xl:text-xl">
-              Get Started
-            </Button>
+            <Link href="/sign-up">
+              <Button className="animate-buttonheartbeat bg-farm text-lg text-white hover:bg-farm/80 xl:px-8 xl:py-6 xl:text-xl">
+                Get Started
+              </Button>
+            </Link>
 
             <Button
               variant="ghost"
