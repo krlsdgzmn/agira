@@ -110,6 +110,8 @@ export default function HomePage() {
           />
         </div>
       </section>
+
+      <section className="py-10"></section>
     </Container>
   );
 }
