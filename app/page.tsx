@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import FeatureCard from "./_components/feature-card";
 import Link from "next/link";
+import FarmCard from "./_components/farm-card";
 
 export default function HomePage() {
   return (
@@ -64,7 +65,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid min-h-[300px] rounded-t-3xl bg-gradient-to-b from-slate-200/80 to-white py-8 md:grid-cols-3">
+      <section className="grid min-h-[300px] rounded-t-3xl bg-gradient-to-b from-slate-200/80 to-white py-8 md:grid-cols-3 md:py-16">
         <FeatureCard
           title="Local Farms Guaranteed"
           description="Support our local farmers, fresh goods come from your local community!"
@@ -84,7 +85,31 @@ export default function HomePage() {
         />
       </section>
 
-      <section className="h-[516px]"></section>
+      <section className="mx-auto min-h-[300px] max-w-screen-xl">
+        <div className="flex flex-col px-2 text-center md:flex-row md:items-end md:justify-between">
+          <h1 className="text-2xl font-bold md:text-left">Trusted Farms</h1>
+          <Link
+            href="/sign-up"
+            className="font-medium text-farm hover:underline"
+          >
+            View all farms &rarr;
+          </Link>
+        </div>
+
+        <div className="grid justify-center gap-4 pt-2 md:grid-cols-3 xl:gap-8 xl:pt-4">
+          <FarmCard
+            title="Kamalig Farm"
+            location="Tarlac"
+            image="/farm-1.png"
+          />
+          <FarmCard title="Haven Farm" location="Bulacan" image="/farm-2.png" />
+          <FarmCard
+            title="Westija Farm"
+            location="Nueva Ecija"
+            image="/farm-3.png"
+          />
+        </div>
+      </section>
     </Container>
   );
 }
