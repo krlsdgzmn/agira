@@ -57,6 +57,8 @@ export default function HomePage() {
             alt="Jeo the Farmer"
             width={553}
             height={616}
+            quality={100}
+            unoptimized
             priority
           />
         </div>
