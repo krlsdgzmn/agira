@@ -53,7 +53,7 @@ export default function HomePage() {
 
         <div className="flex items-end justify-center md:justify-end">
           <Image
-            src="/jeo.svg"
+            src="/jeo.png"
             alt="Jeo the Farmer"
             width={553}
             height={616}
