@@ -52,7 +52,13 @@ export default function HomePage() {
         </div>
 
         <div className="flex items-end justify-center md:justify-end">
-          <Image src="/jeo.svg" alt="Jeo the Farmer" width={553} height={616} />
+          <Image
+            src="/jeo.svg"
+            alt="Jeo the Farmer"
+            width={553}
+            height={616}
+            priority
+          />
         </div>
       </section>
 
