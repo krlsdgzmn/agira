@@ -66,7 +66,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid min-h-[300px] rounded-t-3xl bg-gradient-to-b from-slate-200/80 to-white py-8 md:grid-cols-3 md:py-16">
+      <section className="relative grid min-h-[300px] rounded-t-3xl py-8 md:grid-cols-3 md:py-16">
+        <div className="absolute left-[-2rem] top-0 -z-10 h-full w-[1536px] bg-gradient-to-b from-slate-200/70 to-white" />
         <FeatureCard
           title="Local Farms Guaranteed"
           description="Support our local farmers, fresh goods come from your local community!"
@@ -89,10 +90,7 @@ export default function HomePage() {
       <section className="mx-auto min-h-[300px] max-w-screen-xl pb-20">
         <div className="flex flex-col px-2 text-center md:flex-row md:items-end md:justify-between">
           <h1 className="text-2xl font-bold md:text-left">Trusted Farms</h1>
-          <Link
-            href="/sign-up"
-            className="font-medium text-farm hover:underline"
-          >
+          <Link href="#" className="font-medium text-farm hover:underline">
             View all farms &rarr;
           </Link>
         </div>
@@ -116,7 +114,7 @@ export default function HomePage() {
       <RoadmapSection />
 
       {/* SDG Section */}
-      <section className="grid pt-[10rem] lg:grid-cols-2 xl:pt-[15rem]">
+      <section className="grid px-8 py-[5rem] lg:grid-cols-2 lg:py-[8rem]">
         <div className="relative">
           <Image
             src="/sdg-1-bg.png"
@@ -183,7 +181,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16"></section>
+      <section className="relative flex h-[400px] items-center px-8 lg:h-[700px]">
+        <div className="absolute left-[-2rem] top-0 -z-10 h-full w-[1536px] bg-gradient-to-br from-white from-40% to-farm/50" />
+        <div className="to-muted-foreground/10 lg:max-w-[40%]">
+          <h1 className="text-3xl font-bold lg:text-5xl">
+            Maximize your produce today
+          </h1>
+          <p className="pb-8 pt-4">
+            Maximize your farm&apos;s potential by partnering with Agira! Gain
+            access to a wider market, receive timely financial support through
+            microloans, and benefit from our comprehensive resources and tools.
+          </p>
+          <Link
+            href="/sign-up"
+            className="text-lg font-bold text-farm hover:underline"
+          >
+            Sign up &rarr;
+          </Link>
+        </div>
+
+        <Image
+          src="/bottom-bg.png"
+          alt="Agira Platform"
+          className="absolute right-[-22rem] top-[-1rem] hidden scale-75 lg:right-[-25rem] lg:block xl:right-[-30rem] xl:top-[-10rem]"
+          height={1568}
+          width={1797}
+          quality={100}
+          unoptimized
+          priority
+        />
+      </section>
     </Container>
   );
 }
