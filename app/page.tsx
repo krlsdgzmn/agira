@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FarmCard from "./_components/farm-card";
 import FeatureCard from "./_components/feature-card";
+import RoadmapSection from "./_components/roadmap-section";
 
 export default function HomePage() {
   return (
@@ -112,89 +113,77 @@ export default function HomePage() {
       </section>
 
       {/* Roadmap Section */}
-      <section className="px-8">
-        <div className="relative mx-auto w-fit">
-          <h1 className="mx-auto w-fit bg-gradient-to-r from-farm to-yellow-400 bg-clip-text py-2 text-3xl font-bold text-transparent md:text-5xl">
-            The Future&apos;s Bright
-          </h1>
-          <p className="text-center font-medium text-muted-foreground md:text-lg">
-            Take a peek on how Agira will evolve throughout its development.
-          </p>
+      <RoadmapSection />
+
+      {/* SDG Section */}
+      <section className="grid pt-[5rem] lg:grid-cols-2 xl:pt-[15rem]">
+        <div className="relative">
+          <Image
+            src="/sdg-1-bg.png"
+            alt="Agira Platform"
+            className="absolute left-[-15rem] top-36 hidden scale-150 lg:left-[-20rem] lg:block xl:top-24"
+            height={1698}
+            width={1462}
+            quality={100}
+            unoptimized
+            priority
+          />
         </div>
 
-        <div className="grid pt-8 md:pt-16 lg:grid-cols-2">
-          <div className="grid gap-8 md:grid-cols-2 md:gap-16">
-            <div className="text-sm xl:text-base">
-              <Image src="/q2-icon.svg" alt="Q2" width={48} height={48} />
-              <h1 className="py-2 text-lg font-bold lg:text-xl">Q2 2024</h1>
-              <p className="text-muted-foreground">
-                In June 2024, Agira established the platform&apos;s{" "}
-                <span className="font-semibold">core online backbone</span> and
-                launched initiatives for decentralized financing, tokenization,
-                and accessibility. <br /> <br /> Comprehensive{" "}
-                <span className="font-semibold">partnership propositions</span>{" "}
-                were also introduced to enhance user engagement.
-              </p>
-            </div>
+        <div>
+          <h1 className="pb-2 font-medium text-orange-500">
+            Social Development Goals
+          </h1>
+          <h2 className="text-3xl font-bold md:text-5xl">
+            Shaping the world, one goal at a time.
+          </h2>
+          <p className="pb-8 pt-4 text-sm text-muted-foreground xl:pb-16 xl:text-base">
+            Through innovation, transparency, and community empowerment, we aim
+            to create a resilient and sustainable food system that benefits both
+            producers and consumers.
+          </p>
 
+          <div className="grid gap-8 md:grid-cols-2 xl:gap-16">
             <div className="text-sm xl:text-base">
-              <Image src="/q3-icon.svg" alt="Q3" width={48} height={48} />
-              <h1 className="py-2 text-lg font-bold lg:text-xl">Q3 2024</h1>
-              <p className="text-muted-foreground">
-                From July to December 2024, Agira will conduct a{" "}
-                <span className="font-semibold">pilot launch</span> to gather
-                user data and feedback, onboarding initial producers and
-                consumers. <br /> <br />{" "}
-                <span className="font-semibold">Partnerships</span> with local
-                agricultural organizations and{" "}
-                <span className="font-semibold">sponsorships</span> from
-                cooperative associations and governmental institutions will be
-                established.
-              </p>
-            </div>
-
-            <div className="text-sm xl:text-base">
-              <Image src="/q4-icon.svg" alt="Q4" width={48} height={48} />
-              <h1 className="py-2 text-lg font-bold lg:text-xl">Q4 2024</h1>
-              <p className="text-muted-foreground">
-                The introduction of <span className="font-semibold">$GIRA</span>
-                will include the Agira Wallet,{" "}
-                <span className="font-semibold">Web3.0</span> decentralization,
-                smart contracts, and financial tools like microloan options and
-                grant applications.
-              </p>
-            </div>
-
-            <div className="text-sm xl:text-base">
-              <Image src="/2025-icon.svg" alt="Q4" width={48} height={48} />
+              <Image src="/sdg2.png" alt="SDG 2" width={48} height={48} />
               <h1 className="py-2 text-lg font-bold lg:text-xl">
-                2025 and Beyond
+                SDG 2: <br /> Zero Hunger
               </h1>
               <p className="text-muted-foreground">
-                Starting in 2025, Agira will integrate AI for{" "}
-                <span className="font-semibold">predictive analytics</span> ,
-                supply chain optimization, blockchain-based traceability, and
-                automated financial advising.
+                Agira supports sustainable agricultural practices to improve
+                food production and distribution, increasing food security and
+                helping eradicate hunger.
               </p>
             </div>
-          </div>
 
-          <div className="relative">
-            <Image
-              src="/map-1-bg.png"
-              alt="Agira Platform"
-              className="absolute right-[-17rem] top-5 hidden scale-150 lg:block"
-              height={1568}
-              width={1797}
-              quality={100}
-              unoptimized
-              priority
-            />
+            <div className="text-sm xl:text-base">
+              <Image src="/sdg8.png" alt="SDG 8" width={48} height={48} />
+              <h1 className="py-2 text-lg font-bold lg:text-xl">
+                SDG 8: Decent Work and Economic Growth
+              </h1>
+              <p className="text-muted-foreground">
+                Agira promotes inclusive and sustainable economic growth by
+                facilitating access to financial resources and new market
+                opportunities for farmers.
+              </p>
+            </div>
+
+            <div className="text-sm xl:text-base">
+              <Image src="/sdg12.png" alt="SDG 2" width={48} height={48} />
+              <h1 className="py-2 text-lg font-bold lg:text-xl">
+                SDG 12: Responsible Consumption and Production
+              </h1>
+              <p className="text-muted-foreground">
+                Agira fosters a sustainable and transparent food production
+                system by promoting sustainable farming practices and supply
+                chain transparency.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-[10rem]"></section>
+      <section className="py-16"></section>
     </Container>
   );
 }
