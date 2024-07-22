@@ -116,12 +116,12 @@ export default function HomePage() {
       <RoadmapSection />
 
       {/* SDG Section */}
-      <section className="grid pt-[5rem] lg:grid-cols-2 xl:pt-[15rem]">
+      <section className="grid pt-[10rem] lg:grid-cols-2 xl:pt-[15rem]">
         <div className="relative">
           <Image
             src="/sdg-1-bg.png"
             alt="Agira Platform"
-            className="absolute left-[-15rem] top-36 hidden scale-150 lg:left-[-20rem] lg:block xl:top-24"
+            className="absolute left-[-15rem] top-32 hidden scale-150 lg:left-[-20rem] lg:block xl:top-24"
             height={1698}
             width={1462}
             quality={100}

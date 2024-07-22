@@ -14,7 +14,7 @@ export default function RoadmapSection() {
       </div>
 
       <div className="grid pt-8 md:pt-16 lg:grid-cols-2">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-16">
+        <div className="grid gap-8 md:grid-cols-2 xl:gap-16">
           <div className="text-sm xl:text-base">
             <Image src="/q2-icon.svg" alt="Q2" width={48} height={48} />
             <h1 className="py-2 text-lg font-bold lg:text-xl">Q2 2024</h1>
