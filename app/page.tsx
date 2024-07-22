@@ -5,8 +5,13 @@ import Link from "next/link";
 import FarmCard from "./_components/farm-card";
 import FeatureCard from "./_components/feature-card";
 import RoadmapSection from "./_components/roadmap-section";
+import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const user = await currentUser();
+  if (user) redirect("/role");
+
   return (
     <Container className="overflow-hidden">
       {/* Hero Section */}
@@ -81,8 +86,8 @@ export default function HomePage() {
         />
 
         <FeatureCard
-          title="Customize Your Box"
-          description="Choose from a variety of subscription plans to fit your needs. Whether you prefer a weekly surprise or handpicking your favorites, we have you covered."
+          title="Grab Amazing Deals"
+          description="Check out our current promotions and save on your favorite fruits and vegetables."
           icon="/green-icon.svg"
         />
       </section>
@@ -187,7 +192,7 @@ export default function HomePage() {
           <h1 className="text-3xl font-bold lg:text-5xl">
             Maximize your produce today
           </h1>
-          <p className="pb-8 pt-4">
+          <p className="pb-8 pt-4 text-sm xl:text-base">
             Maximize your farm&apos;s potential by partnering with Agira! Gain
             access to a wider market, receive timely financial support through
             microloans, and benefit from our comprehensive resources and tools.
