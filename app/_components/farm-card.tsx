@@ -12,7 +12,7 @@ export default function FarmCard({
 }) {
   return (
     <Link
-      href="/sign-up"
+      href="#"
       className="mx-auto overflow-hidden rounded-xl border border-border bg-card shadow-md transition-all duration-300 ease-in-out hover:scale-105 xl:min-w-[415px] xl:shadow-lg"
     >
       <Image
