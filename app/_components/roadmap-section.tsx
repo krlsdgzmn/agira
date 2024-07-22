@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function RoadmapSection() {
   return (
-    <section className="px-8">
+    <section className="px-8 md:pb-20 xl:pb-32">
       <div className="relative mx-auto w-fit">
         <h1 className="mx-auto w-fit bg-gradient-to-r from-farm to-yellow-400 bg-clip-text py-2 text-3xl font-bold text-transparent md:text-5xl">
           The Future&apos;s Bright
@@ -73,7 +73,7 @@ export default function RoadmapSection() {
           <Image
             src="/map-1-bg.png"
             alt="Agira Platform"
-            className="absolute right-[-17rem] top-5 hidden scale-150 lg:block"
+            className="absolute right-[-17rem] top-5 -z-10 hidden scale-150 lg:block"
             height={1568}
             width={1797}
             quality={100}
