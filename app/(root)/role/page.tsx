@@ -1,21 +1,11 @@
 import Container from "@/components/container";
-import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function RolePage() {
-  const user = await currentUser();
-
+export default function RolePage() {
   return (
     <Container className="flex min-h-[85vh] items-center justify-center py-8">
       <main>
-        <h1 className="text-xl font-semibold text-muted-foreground md:text-3xl">
-          Hi, {user?.firstName}!
-        </h1>
-        <h2 className="text-3xl font-bold md:text-5xl">
-          What&apos;s your role?
-        </h2>
-
         <section className="mx-auto grid gap-8 py-4 sm:grid-cols-2 md:py-8 lg:min-w-[1024px] lg:gap-16">
           <Link
             href="/marketplace"
