@@ -87,7 +87,7 @@ export default function MarketplacePage() {
             <Image
               src="/agira-marketplace.png"
               alt="Agira Marketplace"
-              className="h-full max-h-72 w-full"
+              className="h-full max-h-36 w-full sm:max-h-72"
               width={300}
               height={800}
               quality={100}
