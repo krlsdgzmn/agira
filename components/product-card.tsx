@@ -18,7 +18,7 @@ export default function ProductCard({
     <Link href="#" className="">
       <Image
         src={image}
-        alt="Sampalok"
+        alt={name}
         className="h-[125px] w-full object-contain"
         width={200}
         height={200}
