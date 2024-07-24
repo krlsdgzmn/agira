@@ -1,5 +1,6 @@
 import { UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
+import { Bell, MessageCircleMore, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import SearchInput from "./search-input";
@@ -44,8 +45,24 @@ export default async function Header() {
             </div>
           )}
 
-          {/* Mount the UserButton component */}
-          {user && <UserButton />}
+          {user && (
+            <>
+              <div className="gap-0">
+                <Button variant="ghost" size="icon">
+                  <ShoppingCart className="text-farm" />
+                </Button>
+
+                <Button variant="ghost" size="icon">
+                  <Bell className="text-farm" />
+                </Button>
+
+                <Button variant="ghost" size="icon">
+                  <MessageCircleMore className="text-farm" />
+                </Button>
+              </div>
+              <UserButton />
+            </>
+          )}
         </div>
       </div>
     </header>
