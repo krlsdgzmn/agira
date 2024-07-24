@@ -89,6 +89,9 @@ export default function WholeSaleSection() {
   return (
     <section className="py-8">
       <h1 className="text-lg font-bold md:text-2xl">Whole Sale</h1>
+      <p className="text-muted-foreground">
+        Discover the Best Deals on Bulk Purchases
+      </p>
 
       <Carousel
         className="mx-auto w-full"
