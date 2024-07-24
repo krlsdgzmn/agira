@@ -98,14 +98,14 @@ export default function MarketplacePage() {
               <Image
                 src="/logo.svg"
                 alt="Logo"
-                className="h-20 w-20 sm:h-32 sm:w-32"
+                className="h-16 w-16 sm:h-32 sm:w-32"
                 width={128}
                 height={128}
                 quality={100}
                 unoptimized
               />
 
-              <h1 className="mx-auto text-2xl font-extrabold text-white sm:text-4xl md:text-5xl">
+              <h1 className="pl-4 text-xl font-extrabold text-white sm:pl-8 sm:text-4xl md:text-5xl">
                 AGIRA MARKETPLACE
               </h1>
             </div>

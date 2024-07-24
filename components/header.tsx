@@ -47,13 +47,12 @@ export default async function Header() {
 
           {user && (
             <>
-              <div className="gap-0">
-                <Button variant="ghost" size="icon">
-                  <ShoppingCart className="text-farm" />
-                </Button>
-
+              <div className="flex gap-0">
                 <Button variant="ghost" size="icon">
                   <Bell className="text-farm" />
+                </Button>
+                <Button variant="ghost" size="icon">
+                  <ShoppingCart className="text-farm" />
                 </Button>
 
                 <Button variant="ghost" size="icon">

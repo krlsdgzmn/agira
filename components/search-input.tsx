@@ -24,7 +24,7 @@ export default function SearchInput() {
   return (
     <>
       {currentPath === "/marketplace" && (
-        <div className="my-4 flex h-9 w-[250px] items-center gap-2 overflow-hidden rounded-md border border-border bg-gray-50">
+        <div className="my-4 hidden h-9 w-[250px] items-center gap-2 overflow-hidden rounded-md border border-border bg-gray-50 sm:flex">
           <Button
             variant="ghost"
             className="h-full w-full p-0 pl-2 pr-6"
