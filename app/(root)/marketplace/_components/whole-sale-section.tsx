@@ -1,6 +1,6 @@
 "use client";
 
-import ProductCard from "@/components/product-card";
+import ProductCard from "./product-card";
 import {
   Carousel,
   CarouselContent,
