@@ -73,7 +73,7 @@ const products = [
     price: 100,
     unit: "kg",
     farm: "Pinked Farm",
-    image: "/products/Tomatoes.png",
+    image: "/products/tomatoes.png",
   },
   {
     id: 9,
