@@ -77,6 +77,63 @@ const products = [
   },
 ];
 
+const farms = [
+  {
+    id: 1,
+    farm_name: "Harvest Haven Farm",
+    image: "/farms/farm-1.png",
+    location: "Gatgatan",
+  },
+  {
+    id: 2,
+    farm_name: "Kamalig Farm",
+    image: "/farms/farm-2.png",
+    location: "Tarlac",
+  },
+  {
+    id: 3,
+    farm_name: "Conchie Farm",
+    image: "/farms/farm-3.png",
+    location: "Pampanga",
+  },
+  {
+    id: 4,
+    farm_name: "ForThee Farm",
+    image: "/farms/farm-4.png",
+    location: "Nueva Ecija",
+  },
+  {
+    id: 5,
+    farm_name: "Dinakdakan Farm",
+    image: "/farms/farm-5.png",
+    location: "Bulacan",
+  },
+  {
+    id: 6,
+    farm_name: "Baliwag Farm",
+    image: "/farms/farm-6.png",
+    location: "Bulacan",
+  },
+  {
+    id: 7,
+    farm_name: "Sinawali Farm",
+    image: "/farms/farm-7.png",
+    location: "Bulacan",
+  },
+  {
+    id: 8,
+    farm_name: "Pinked Farm",
+    image: "/farms/farm-8.png",
+    location: "Nueva Ecija",
+  },
+  {
+    id: 9,
+    farm_name: "Baguio Farm",
+    image: "/farms/farm-9.png",
+    location: "Nueva Ecija",
+  },
+];
+
 export default function MarketplacePage() {
   return (
     <Container>
@@ -141,7 +198,7 @@ export default function MarketplacePage() {
           title="Whole Sale"
           description="Discover the Best Deals on Bulk Purchases"
           delayCount={4000}
-          products={products}
+          carousels={products}
         />
 
         {/* Amazing Deals Section */}
@@ -149,7 +206,15 @@ export default function MarketplacePage() {
           title="Amazing Deals"
           description="Unbeatable Prices on Top-Quality Products"
           delayCount={7000}
-          products={products}
+          carousels={products}
+        />
+
+        {/* Farms Near You */}
+        <MarketplaceSection
+          title="Farms Near You"
+          description="Fresh, Local, and Sustainable"
+          delayCount={5000}
+          carousels={farms}
         />
       </main>
     </Container>
