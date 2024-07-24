@@ -1,31 +1,32 @@
 "use client";
 
-import ProductCard from "./product-card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
   CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import CarouselCard from "./carousel-card";
 
 export default function MarketplaceSection({
   title,
   description,
   delayCount,
-  products,
+  carousels,
 }: {
   title: string;
   description: string;
   delayCount: number;
-  products: {
+  carousels: {
     id: number;
-    product_name: string;
-    price: number;
-    unit: string;
+    product_name?: string;
+    price?: number;
+    unit?: string;
     farm_name: string;
     image: string;
+    location?: string;
   }[];
 }) {
   return (
@@ -39,17 +40,18 @@ export default function MarketplaceSection({
         plugins={[Autoplay({ delay: delayCount })]}
       >
         <CarouselContent className="gap-4 p-4">
-          {products.map((item) => (
+          {carousels.map((item) => (
             <CarouselItem
               key={item.id}
               className="max-w-[200px] basis-1/2 overflow-hidden rounded-lg border border-border bg-card pl-0 shadow sm:basis-1/3"
             >
-              <ProductCard
-                name={item.product_name}
+              <CarouselCard
+                product_name={item.product_name}
                 price={item.price}
                 unit={item.unit}
-                farm={item.farm_name}
+                farm_name={item.farm_name}
                 image={item.image}
+                location={item.location}
               />
             </CarouselItem>
           ))}
