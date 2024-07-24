@@ -2,8 +2,8 @@ import { UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import SearchInput from "./search-input";
+import { Button } from "./ui/button";
 
 export default async function Header() {
   const user = await currentUser();
