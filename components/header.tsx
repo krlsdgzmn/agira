@@ -46,7 +46,7 @@ export default async function Header() {
           <SearchInput />
 
           {!user && (
-            <div className="hidden items-center gap-2 sm:flex">
+            <div className="flex items-center gap-2">
               <Link href="/sign-in">
                 <Button variant="outline" size="sm">
                   Login
