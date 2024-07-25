@@ -1,138 +1,7 @@
 import Container from "@/components/container";
 import MarketplaceSection from "./_components/whole-sale-section";
 import Image from "next/image";
-
-const products = [
-  {
-    id: 1,
-    product_name: "Sampalok",
-    price: 115,
-    unit: "kg",
-    farm_name: "Harvest Haven Farm",
-    image: "/products/sampalok.png",
-  },
-  {
-    id: 2,
-    product_name: "Corn",
-    price: 250,
-    unit: "kg",
-    farm_name: "Kamalig Farm",
-    image: "/products/corn.png",
-  },
-  {
-    id: 3,
-    product_name: "Eggplant",
-    price: 120,
-    unit: "kg",
-    farm_name: "Conchie Farm",
-    image: "/products/eggplant.png",
-  },
-  {
-    id: 4,
-    product_name: "Cabbage",
-    price: 180,
-    unit: "kg",
-    farm_name: "ForThee Farm",
-    image: "/products/cabbage.png",
-  },
-  {
-    id: 5,
-    product_name: "Mushrooms",
-    price: 110,
-    unit: "kg",
-    farm_name: "Dinakdakan Farm",
-    image: "/products/mushrooms.png",
-  },
-  {
-    id: 6,
-    product_name: "Bell Peppers",
-    price: 220,
-    unit: "kg",
-    farm_name: "Baliwag Farm",
-    image: "/products/bell-peppers.png",
-  },
-  {
-    id: 7,
-    product_name: "Cucumbers",
-    price: 120,
-    unit: "kg",
-    farm_name: "Sinawali Farm",
-    image: "/products/cucumbers.png",
-  },
-  {
-    id: 8,
-    product_name: "Tomatoes",
-    price: 100,
-    unit: "kg",
-    farm_name: "Pinked Farm",
-    image: "/products/tomatoes.png",
-  },
-  {
-    id: 9,
-    product_name: "Strawberries",
-    price: 325,
-    unit: "kg",
-    farm_name: "Baguio Farm",
-    image: "/products/strawberries.png",
-  },
-];
-
-const farms = [
-  {
-    id: 1,
-    farm_name: "Harvest Haven Farm",
-    image: "/farms/farm-1.png",
-    location: "Gatgatan",
-  },
-  {
-    id: 2,
-    farm_name: "Kamalig Farm",
-    image: "/farms/farm-2.png",
-    location: "Tarlac",
-  },
-  {
-    id: 3,
-    farm_name: "Conchie Farm",
-    image: "/farms/farm-3.png",
-    location: "Pampanga",
-  },
-  {
-    id: 4,
-    farm_name: "ForThee Farm",
-    image: "/farms/farm-4.png",
-    location: "Nueva Ecija",
-  },
-  {
-    id: 5,
-    farm_name: "Dinakdakan Farm",
-    image: "/farms/farm-5.png",
-    location: "Bulacan",
-  },
-  {
-    id: 6,
-    farm_name: "Baliwag Farm",
-    image: "/farms/farm-6.png",
-    location: "Bulacan",
-  },
-  {
-    id: 7,
-    farm_name: "Sinawali Farm",
-    image: "/farms/farm-7.png",
-    location: "Bulacan",
-  },
-  {
-    id: 8,
-    farm_name: "Pinked Farm",
-    image: "/farms/farm-8.png",
-    location: "Nueva Ecija",
-  },
-  {
-    id: 9,
-    farm_name: "Baguio Farm",
-    image: "/farms/farm-9.png",
-    location: "Nueva Ecija",
-  },
-];
+import { products, farms } from "@/lib/dummy-data";
 
 export default function MarketplacePage() {
   return (
@@ -207,6 +76,7 @@ export default function MarketplacePage() {
           description="Unbeatable Prices on Top-Quality Products"
           delayCount={7000}
           carousels={products}
+          isDiscounted
         />
 
         {/* Farms Near You */}
