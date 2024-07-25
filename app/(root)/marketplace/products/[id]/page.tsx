@@ -123,9 +123,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           <div className="flex items-center gap-2 pt-4 text-sm text-muted-foreground">
             <Input
               type="number"
-              min={0}
+              min={1}
               className="w-fit max-w-16 text-center focus-visible:ring-farm"
-              placeholder="0"
+              value={1}
               required
             />
             <p>Quantity / {product.unit.toUpperCase()}</p>
