@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SearchInput from "./search-input";
 import { Button } from "./ui/button";
+import { redirect } from "next/navigation";
 
 const links = [
   { name: "Marketplace", href: "/marketplace" },
@@ -69,9 +70,12 @@ export default async function Header() {
                 <Button variant="ghost" size="icon">
                   <Bell className="text-farm" />
                 </Button>
-                <Button variant="ghost" size="icon">
-                  <ShoppingCart className="text-farm" />
-                </Button>
+
+                <Link href="/cart">
+                  <Button variant="ghost" size="icon">
+                    <ShoppingCart className="text-farm" />
+                  </Button>
+                </Link>
 
                 <Button variant="ghost" size="icon">
                   <MessageCircleMore className="text-farm" />

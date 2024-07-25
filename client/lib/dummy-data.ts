@@ -138,3 +138,16 @@ export const farms = [
     location: "Nueva Ecija",
   },
 ];
+
+export let cart = [
+  {
+    cart_id: "1",
+    product_id: "4",
+    quantity: 2,
+  },
+  {
+    cart_id: "2",
+    product_id: "1",
+    quantity: 3,
+  },
+];
