@@ -6,6 +6,7 @@ export const products = [
     unit: "kg",
     farm_name: "Harvest Haven Farm",
     image: "/products/sampalok.png",
+    category: "Fruits",
   },
   {
     id: "2",
@@ -14,6 +15,7 @@ export const products = [
     unit: "kg",
     farm_name: "Kamalig Farm",
     image: "/products/corn.png",
+    category: "Vegetables",
   },
   {
     id: "3",
@@ -22,6 +24,7 @@ export const products = [
     unit: "kg",
     farm_name: "Conchie Farm",
     image: "/products/eggplant.png",
+    category: "Vegetables",
   },
   {
     id: "4",
@@ -30,6 +33,7 @@ export const products = [
     unit: "kg",
     farm_name: "ForThee Farm",
     image: "/products/cabbage.png",
+    category: "Vegetables",
   },
   {
     id: "5",
@@ -38,6 +42,7 @@ export const products = [
     unit: "kg",
     farm_name: "Dinakdakan Farm",
     image: "/products/mushrooms.png",
+    category: "Vegetables",
   },
   {
     id: "6",
@@ -46,6 +51,7 @@ export const products = [
     unit: "kg",
     farm_name: "Baliwag Farm",
     image: "/products/bell-peppers.png",
+    category: "Vegetables",
   },
   {
     id: "7",
@@ -54,6 +60,7 @@ export const products = [
     unit: "kg",
     farm_name: "Sinawali Farm",
     image: "/products/cucumbers.png",
+    category: "Vegetables",
   },
   {
     id: "8",
@@ -62,6 +69,7 @@ export const products = [
     unit: "kg",
     farm_name: "Pinked Farm",
     image: "/products/tomatoes.png",
+    category: "Vegetables",
   },
   {
     id: "9",
@@ -70,6 +78,7 @@ export const products = [
     unit: "kg",
     farm_name: "Baguio Farm",
     image: "/products/strawberries.png",
+    category: "Fruits",
   },
 ];
 

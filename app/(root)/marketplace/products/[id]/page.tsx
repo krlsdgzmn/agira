@@ -1,6 +1,8 @@
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { products } from "@/lib/dummy-data";
+import { ShoppingCart, Tractor } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,6 +13,7 @@ type Products = {
   unit: string;
   farm_name: string;
   image: string;
+  category: string;
 };
 
 const filterData = (id: string): Products | undefined => {
@@ -41,7 +44,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   return (
     <Container className="flex min-h-[85vh] items-center justify-center py-8">
-      <main className="flex h-full w-full flex-col gap-4 sm:flex-row">
+      <main className="flex h-full w-full flex-col items-center gap-4 sm:flex-row">
         <div className="flex h-full max-h-[250px] items-center justify-center overflow-hidden rounded-lg sm:max-h-[500px] sm:w-1/2">
           <Image
             src={product.image}
@@ -56,13 +59,26 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         </div>
 
         <div className="h-full sm:w-1/2 sm:p-8">
-          <h1 className="text-2xl font-bold sm:pb-2 sm:text-4xl">
+          <h1 className="flex gap-2 text-2xl font-bold sm:pb-2 sm:text-4xl">
             {product.product_name}
+            <span>
+              <Image
+                src={
+                  product.category === "Fruits"
+                    ? "/fruits.svg"
+                    : product.category === "Vegetables"
+                      ? "/vegetables.svg"
+                      : "/meat.svg"
+                }
+                className="h-5 w-5 sm:h-6 sm:w-6"
+                alt={product.category}
+                width={15}
+                height={15}
+                title={product.category}
+              />
+            </span>
           </h1>
 
-          {/* <p className="text-sm text-muted-foreground"> */}
-          {/*   ID: {product.id}-XA12-25 */}
-          {/* </p> */}
           <p className="text-lg font-bold text-farm sm:text-2xl">
             <span className="pr-2 text-base font-light text-muted-foreground line-through sm:text-lg">
               ₱{(product.price + 20).toFixed(2)}
@@ -70,7 +86,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             ₱{product.price.toFixed(2)}
           </p>
 
-          <div className="flex w-full items-center gap-4 border-b border-border py-2">
+          <div className="flex w-full items-center gap-2 border-b border-border py-2">
             <Image
               src="/stars.png"
               alt="Ratings"
@@ -86,8 +102,51 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               Consumer Reviews
             </p>
           </div>
-          {/* <p>Unit: {product.unit}</p> */}
-          {/* <p>Farm Name: {product.farm_name}</p> */}
+
+          <div className="flex w-fit items-center gap-2 pt-4 text-xs font-medium text-muted-foreground">
+            <p className="rounded-2xl border-2 border-farm p-1">
+              Category: {product.category}
+            </p>
+            <p className="rounded-2xl border-2 border-farm p-1 px-2">
+              Item ID: {product.id}8121293
+            </p>
+          </div>
+
+          <p className="pt-4 text-sm text-muted-foreground">
+            Welcome to our farm-to-table marketplace! We proudly offer a diverse
+            selection of fresh vegetables, juicy fruits, and high-quality meats.
+            Our products are sourced directly from local farms, ensuring you
+            receive the freshest and most nutritious produce available.
+          </p>
+
+          <div className="flex items-center gap-2 pt-4 text-sm text-muted-foreground">
+            <Input
+              type="number"
+              min={0}
+              className="w-fit max-w-16 text-center focus-visible:ring-farm"
+              placeholder="0"
+              required
+            />
+            <p>Quantity / {product.unit.toUpperCase()}</p>
+          </div>
+
+          <div className="flex items-center gap-2 py-4">
+            <Button className="flex items-center gap-2">
+              <ShoppingCart size={14} /> Add to Cart
+            </Button>
+
+            <Button className="bg-farm hover:bg-farm/90">
+              Proceed to Checkout
+            </Button>
+          </div>
+
+          <Link
+            href="#"
+            className="flex items-center gap-2 border-t border-border py-4 text-sm font-medium text-farm hover:underline"
+          >
+            <Tractor className="h-[36px] w-[36px] rounded-full border-2 border-farm p-2 text-farm" />
+            <p>{product.farm_name}</p>
+          </Link>
         </div>
       </main>
     </Container>
