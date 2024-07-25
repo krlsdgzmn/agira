@@ -5,6 +5,7 @@ import { products } from "@/lib/dummy-data";
 import { ShoppingCart, Tractor } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import MarketplaceSection from "../../_components/whole-sale-section";
 
 type Products = {
   id: string;
@@ -43,7 +44,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <Container className="flex min-h-[85vh] items-center justify-center py-8">
+    <Container className="flex min-h-[85vh] flex-col items-center justify-center py-8">
       <main className="flex h-full w-full flex-col items-center gap-4 sm:flex-row">
         <div className="flex h-full max-h-[250px] items-center justify-center overflow-hidden rounded-lg sm:max-h-[500px] sm:w-1/2">
           <Image
@@ -149,6 +150,16 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           </Link>
         </div>
       </main>
+
+      <div className="container px-0">
+        <MarketplaceSection
+          title="Suggested Products"
+          description="Just for You"
+          delayCount={3000}
+          carousels={products}
+          isDiscounted
+        />
+      </div>
     </Container>
   );
 }
