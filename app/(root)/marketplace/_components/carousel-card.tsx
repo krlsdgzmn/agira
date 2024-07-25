@@ -2,22 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function CarouselCard({
+  id,
   product_name,
   price,
   unit,
   farm_name,
   image,
   location,
+  isDiscounted,
 }: {
+  id: string;
   product_name?: string;
   price?: number;
   unit?: string;
   farm_name: string;
   image: string;
   location?: string;
+  isDiscounted?: boolean;
 }) {
   return (
-    <Link href="#" className="">
+    <Link
+      href={
+        location ? `/marketplace/farmers/${id}` : `/marketplace/products/${id}`
+      }
+    >
       <Image
         src={image}
         alt={farm_name}
@@ -42,6 +50,11 @@ export default function CarouselCard({
         </h1>
         {price && (
           <h2 className="text-xs text-orange-500">
+            {isDiscounted && (
+              <span className="pr-2 font-light text-muted-foreground line-through">
+                ₱{(price + 20).toFixed(2)}
+              </span>
+            )}
             ₱{price.toFixed(2)}/{unit}
           </h2>
         )}

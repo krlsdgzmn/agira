@@ -15,12 +15,13 @@ export default function MarketplaceSection({
   description,
   delayCount,
   carousels,
+  isDiscounted,
 }: {
   title: string;
   description: string;
   delayCount: number;
   carousels: {
-    id: number;
+    id: string;
     product_name?: string;
     price?: number;
     unit?: string;
@@ -28,6 +29,7 @@ export default function MarketplaceSection({
     image: string;
     location?: string;
   }[];
+  isDiscounted?: boolean;
 }) {
   return (
     <section className="pt-8">
@@ -43,15 +45,17 @@ export default function MarketplaceSection({
           {carousels.map((item) => (
             <CarouselItem
               key={item.id}
-              className="max-w-[200px] basis-1/2 overflow-hidden rounded-lg border border-border bg-card pl-0 shadow sm:basis-1/3"
+              className="min-w-[200px] max-w-[200px] basis-1/2 overflow-hidden rounded-lg border border-border bg-card pl-0 shadow sm:basis-1/3"
             >
               <CarouselCard
+                id={item.id}
                 product_name={item.product_name}
                 price={item.price}
                 unit={item.unit}
                 farm_name={item.farm_name}
                 image={item.image}
                 location={item.location}
+                isDiscounted={isDiscounted}
               />
             </CarouselItem>
           ))}
